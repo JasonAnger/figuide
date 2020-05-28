@@ -53,7 +53,7 @@
 .NavList div:last-child{
     background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
     border: none;
-    padding-top: 11px;
+    padding-top: 12px;
 }
 
 .NavList div:last-child a{
@@ -64,7 +64,7 @@
 .NavList div:last-child:hover {
     background: transparent;
     border: 4px solid #53fbb5;
-    padding: 6px 4px 4px 4px;
+    padding: 8px 4px 4px 4px;
     transition: ease-in 0.13s;
 }
 

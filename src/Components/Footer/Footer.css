@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Franklin Gothic Demi Cond';
+    src: url(../../Fonts/FRADMCN.TTF);
+}
+
+.Footer {
+    margin-top: 80px;
+    width: 94%%;
+    height: 160px;
+    background-image: url(../../Images/Footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-left: 6%;
+    font-family: 'Franklin Gothic Demi Cond';
+    color: white;
+}
+
+.lastLine {
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+    width: 600px;
+    justify-content: space-around;
+}
+
+.lastLine a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 1439px) {
+    
+}
