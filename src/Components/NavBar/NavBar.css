@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Franklin Gothic Demi Cond';
+    src: url(../../Fonts/FRADMCN.TTF);
+}
+
+.NavBar {
+    display: flex;
+    width: 100%;
+}
+
+.NavLogo {
+    width: 55%;
+}
+.NavLogo img {
+    margin-left: 15%;
+    margin-top: 22px;
+}
+
+.NavList {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.NavList div {
+    width: 20%;
+    margin-top: 20px;
+    border: 4px solid black;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 8px 8px 8px 8px;
+    text-align: center;
+}
+
+.NavList div a {
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Demi Cond';
+    font-size: 23px;
+}
+
+.NavList div:hover {
+    color: #fff;
+    background-color: #000000;
+    transition: ease-in 0.13s;
+}
+
+.NavList div:hover a {
+    color: #fff;
+    transition: ease-in 0.13s;
+}
+
+.NavList div:last-child{
+    background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
+    border: none;
+    padding-top: 11px;
+}
+
+.NavList div:last-child a{
+    color: white;
+}
+
+
+.NavList div:last-child:hover {
+    background: transparent;
+    border: 4px solid #53fbb5;
+    padding: 6px 4px 4px 4px;
+    transition: ease-in 0.13s;
+}
+
+.NavList div:last-child:hover a{
+    color: #53fbb5;
+    transition: ease-in 0.13s;
+}
+
+
+#burger {
+    display: none;
+}
+
+@media screen and (max-width: 1439px) {
+    #burger {
+        display: none;
+    }
+}

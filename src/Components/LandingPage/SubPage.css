@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Franklin Gothic Demi Cond';
+    src: url(../../Fonts/FRADMCN.TTF);
+}
+
+.SubPage {
+    display: flex;
+    margin-top: 10%;
+}
+
+.card-container {
+    width: 50%;
+    display: flex;
+    padding-left: 7%;
+    padding-top: 50px;
+}
+
+.explain-card {
+    background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
+    padding: 5px 5px 5px 5px;
+    border-radius: 15px;
+    width: 28%;
+    height: 90%;
+    margin-left: 5%;
+}
+
+.explain-card-inside {
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+    height: 100%;
+    font-family: 'Franklin Gothic Demi Cond';
+    list-style: none;
+}
+
+.explain-card-inside img {
+    margin-top: 20px;
+    width: 46%;
+}
+
+.explain-card-inside div {
+    font-size: 35px;
+    color: #1fc1cb;
+    margin-bottom: 20px;
+}
+
+.explain-card-inside li {
+    font-size: 26px;
+    color: #a0a0a0;
+}
+
+
+.Go-with {
+    width: 30%;
+}
+
+.Go-with img {
+    margin-left: 20%;
+    width: 80%;
+}
+
+.Go-with div {
+    font-family: 'Franklin Gothic Demi Cond';
+    list-style: none;
+    text-align: right;
+}
+
+.Go-with div li {
+    color: #a0a0a0;
+    font-size: 28px;
+}
+
+#go-with-text {
+    font-size: 95px;
+}
