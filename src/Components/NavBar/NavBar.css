@@ -16,6 +16,11 @@
     margin-top: 22px;
 }
 
+#findIcon {
+    height: 21px;
+    margin-right: 5%;
+}
+
 .NavList {
     display: flex;
     width: 40%;
@@ -43,6 +48,13 @@
     color: #fff;
     background-color: #000000;
     transition: ease-in 0.13s;
+}
+
+#searchButton svg path {
+    fill: #000000;
+}
+#searchButton:hover svg path {
+    fill: #ffffff;
 }
 
 .NavList div:hover a {

@@ -1,0 +1,10 @@
+#SearchContainer {
+    background: rgba(19, 19, 19, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
