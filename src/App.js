@@ -1,31 +1,18 @@
 import React from 'react';
 import './App.css';
 import NavBar from './Components/NavBar/NavBar'
-import MainPage from './Components/LandingPage/MainPage'
-import SubPage from './Components/LandingPage/SubPage'
-import Footer from './Components/Footer/Footer'
-import SignUpLogin from './Components/SignUpLogin/SignUpLogin';
+import LandingPage from './Components/LandingPage'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
   const isLoggedIn = false//props.isLoggedIn;
-  if(!isLoggedIn) return (
-    <div className="App">
-      <NavBar />
-      <MainPage />
-      <img src="./images/Vector Divider.png" style={{width: "100%"}}></img>
-      <SubPage />
-      <Footer />
-      <SignUpLogin />
-    </div>
-  ); 
-  else return (
-    <div className="App">
-      <NavBar />
-      <MainPage />
-      <img src="./images/Vector Divider.png" style={{width: "100%"}}></img>
-      <SubPage />
-      <Footer />
-    </div>
+  return (
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Route path="/" component={LandingPage}></Route>
+      </div>
+    </Router>
   );
 }
 

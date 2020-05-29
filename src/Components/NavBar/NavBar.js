@@ -4,6 +4,8 @@ import './NavBar.css';
 function NavBar() {
     let signUp = () => {
         document.getElementById('SignUpLogin').style.display="flex"
+        document.getElementById('signIn').style.display = "none"
+        document.getElementById('signUp').style.display = "inline"
     }
     return (
         <div className="NavBar">

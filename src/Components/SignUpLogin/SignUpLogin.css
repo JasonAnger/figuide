@@ -8,7 +8,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    position: absolute;
+    position: fixed;
     display: none;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@ h1 {
     position: absolute;
     display: inline;
     width: 40%;
-    height: 60%;
+    height: 70%;
     text-align: center;
     background-color: #ffffff;
     border-radius: 40px;
@@ -45,12 +45,52 @@ h1 {
 
 .SignUp form {
     text-align: left;
-    width: 70%;
-    margin-left: 15%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.SignUp form div {
+    margin-top: 10px;
 }
 
 .SignUp form div label {
-    margin-right: 70%;
+    width: 100%;
+    font-size: 25px;
+    -webkit-transition: all 0.2s ease-out;
+    display: flex;
+}
+.SignUp form div label b {
+    width: 50%;
+}
+
+.registerNotify {
+    color: red;
+    opacity: 0.8;
+    font-size: 13px;
+    text-align: right;
+    display: none;
+    width: 50%;
+}
+
+.SignUp form div input {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: 'Franklin Gothic Demi Cond';
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.SignUp form div:hover label{
+    color: #53fbb5;
+}
+.SignUp form div:hover input{
+    border: 4px solid #53fbb5;
+    color: #42c08c;
+    height: 33px;
+    font-size: 24px;
 }
 
 .SignUp button {
@@ -75,4 +115,33 @@ h1 {
     padding: 6px 4px 4px 4px;
     transition: ease-in 0.13s;
     color: #53fbb5;
+}
+
+.SignInOptions {
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 28px;
+    padding: 5px 5px 5px 5px;
+    width: 44%;
+    margin-left: 28%;
+    text-align: left;
+    color: #df4b4b;
+    border: 4px solid #df4b4b;
+}
+
+.SignInOptions:hover {
+    color: #ffffff;
+    border: 4px solid #df4b4b;
+    background-color: #df4b4b;
+}
+
+.SignInOptions:last-child {
+    color: #4178e1;
+    border: 4px solid #4178e1;
+}
+
+.SignInOptions:last-child:hover {
+    color: white;
+    border: 4px solid #4178e1;
+    background-color: #4178e1;
 }
