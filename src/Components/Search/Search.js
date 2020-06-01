@@ -35,13 +35,7 @@ function Search() {
                         <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" required></input>
                     </div>
                 </form>
-                <button type="submit" >Sign In</button>
-                <button type="submit" >Register</button>
-                <div style={{fontSize: "26px",marginTop:"20px"}}>Sign In with 
-                    <img style={{height: "30px",width:"30px",marginRight:"10px",marginLeft:"10px"}} src="https://img.icons8.com/plasticine/2x/google-logo.png" ></img>
-                     or 
-                    <img style={{height: "30px",width:"30px",marginRight:"10px",marginLeft:"10px"}} src="https://cdn.iconscout.com/icon/free/png-256/facebook-logo-2019-1597680-1350125.png" ></img>
-                </div>
+                <div style={{marginTop: "30px"}}><a id="searchResultsButton" href="/results">Search</a></div>
             </div>
         </div>
     );

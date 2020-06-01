@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar/NavBar'
 import LandingPage from './Components/LandingPage'
 import TrendingPage from './Components/TrendingPage'
 import BeAGuiderPage from './Components/BeAGuiderPage'
+import SearchResults from './Components/SearchResults'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" exact component={LandingPage}></Route>
           <Route path="/trending" component={TrendingPage}></Route>
           <Route path="/beafiguider" component={BeAGuiderPage}></Route>
+          <Route path="/results*" component={SearchResults}></Route>
         </Switch>
       </div>
     </Router>
