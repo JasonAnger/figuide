@@ -1,6 +1,6 @@
 .TourGuide {
     display: flex;
-    font-family: 'Franklin Gothic Demi Cond';
+    font-family: 'Merriweather', serif;
     box-shadow: 0px 0px 5px #dadada;
     border-radius: 10px;
     margin: 20px 20px 20px 20px;
@@ -17,22 +17,59 @@
 
 .tourGuideInformation {
     text-align: left;
+    width: 50%;
     margin-left: 20px;
-    font-size: 24px;
+    font-size: 20px;
+}
+.tourGuideInformation div{
+    margin-top: 3px;
 }
 
 .tourGuideName {
-    font-size: 26px;
+    font-size: 28px;
     color: rgb(0, 177, 147);
 }
 
 .startingAt {
     color: #aaaaaa;
-    text-align: right;
-    margin-right: 20px;
 }
 
 .startingAt b {
     color: rgb(57, 202, 154);
     font-size: 27px;
+}
+
+.chooseOrNot {
+    margin-right: 20px;
+    display: inline;
+    width: 30%;
+    text-align: right;
+}
+
+.bookButton {
+    margin-top: 30%;
+    font-size: 24px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
+    border: none;
+    font-family: 'Franklin Gothic Demi Cond';
+    padding: 6px 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+.label {
+    display: inline;
+    padding: 2px 7px;
+    height: fit-content;
+    margin: 3px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    background-color: #aaaaaa;
 }
