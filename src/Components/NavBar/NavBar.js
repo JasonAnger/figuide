@@ -5,11 +5,13 @@ import Search from '../Search/Search'
 
 function NavBar() {
     let signUp = () => {
+        if(document.getElementById('FilterBox')!=null) document.getElementById('FilterBox').style.display="none"
         document.getElementById('SignUpLogin').style.display="flex"
         document.getElementById('signIn').style.display = "none"
         document.getElementById('signUp').style.display = "inline"
     }
     let search = () => {
+        if(document.getElementById('FilterBox')!=null) document.getElementById('FilterBox').style.display="none"
         document.getElementById('SearchContainer').style.display="flex"
     }
     return (

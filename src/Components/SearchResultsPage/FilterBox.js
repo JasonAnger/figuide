@@ -1,9 +1,11 @@
 import React from 'react';
 import './FilterBox.css';
-
+import SearchArea from '../Search/SearchArea'
 function FilterBox() {
     return (
-        <div id='FilterBox'></div>
+        <div id='FilterBox'>
+            <SearchArea />
+        </div>
     )
 }
 

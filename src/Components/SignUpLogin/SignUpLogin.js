@@ -4,6 +4,7 @@ import './SignUpLogin.css';
 function SignUpLogin() {
     let hideSignUp = () => {
         document.getElementById('SignUpLogin').style.display = "none"
+        if(document.getElementById('FilterBox')!=null) document.getElementById('FilterBox').style.display="block"
     }
     let showSignIn = () => {
         document.getElementById('signUp').style.display = "none"

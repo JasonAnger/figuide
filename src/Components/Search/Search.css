@@ -1,31 +1,83 @@
 #SearchContainer {
-    background: rgba(19, 19, 19, 0.3);
+  background: rgba(19, 19, 19, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchResultsButton {
+  text-align: center;
+  margin-top: 30px;
+  background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
+  border: none;
+  width: 50%;
+  font-family: "Franklin Gothic Demi Cond";
+  padding: 8px 60px;
+  font-size: 25px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.searchResultsButton:hover {
+  background: transparent;
+  border: 4px solid #53fbb5;
+  padding: 5px 60px;
+  transition: ease-in 0.13s;
+  color: #53fbb5;
+}
+
+.applySearchResultsButton {
+  margin-top: 30px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
+  border: none;
+  font-family: "Franklin Gothic Demi Cond";
+  padding: 8px 60px;
+  font-size: 25px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  display: none;
+}
+
+.SearchBox {
+  font-family: "Merriweather";
+  position: absolute;
+  display: inline;
+  width: 40%;
+  height: 60%;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 2%;
+}
+
+.SearchBox form {
+  text-align: left;
+  width: 80%;
+  margin: 0 10%;
+}
+
+.dateContainer {
+  display: flex;
+}
+
+.SearchBox input {
+  height: 35px;
+  font-family: "Merriweather";
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 0 8px;
+  width: 90%;
+}
+
+.space {
     width: 100%;
-    height: 100%;
-    top: 0;
-    position: fixed;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-#searchResultsButton {
-    text-align: center;
-    background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
-    border: none;
-    font-family: 'Franklin Gothic Demi Cond';
-    padding: 8px 30px 8px 30px;
-    font-size: 25px;
-    width: 30%;
-    border-radius: 12px;
-    color: white;
-    text-decoration: none;
-}
-
-#searchResultsButton:hover {
-    background: transparent;
-    border: 4px solid #53fbb5;
-    padding: 6px 30px 4px 30px;
-    transition: ease-in 0.13s;
-    color: #53fbb5;
+    height: 10px;
 }

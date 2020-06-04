@@ -1,7 +1,32 @@
 #FilterBox {
     width: 18%;
     margin-left: 1%;
-    background-color: black;
     position: fixed;
-    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+#FilterBox .SearchBox {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+
+#FilterBox h1 {
+    display: none;
+}
+
+#FilterBox .SearchBox .searchResultsButton {
+    display: none;
+}
+
+#FilterBox .SearchBox .applySearchResultsButton {
+    display: inline;
+}
+
+#FilterBox .SearchBox .dateContainer {
+    display: inline;
 }
