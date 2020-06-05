@@ -3,7 +3,7 @@ import React from 'react';
 function BeAGuiderPage() {
   return (
       <div className="TrendingPage">
-        <h1>Be A Guider PAGE</h1>
+        <h1>BE ONE OF OUR TOUR GUIDES</h1>
       </div>
   );
 }

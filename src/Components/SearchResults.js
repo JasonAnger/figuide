@@ -4,8 +4,6 @@ import TourGuide from './SearchResultsPage/TourGuide'
 import FilterBox from './SearchResultsPage/FilterBox'
 
 function SearchResults() {
-    let fetchLink = window.location.href
-    console.log(fetchLink)
     let fetchData = [{languages:['English','Chinese'],prize:[20,30,50]},{languages:['English'],prize:[20,30,50]},{languages:['Chinese'],prize:[20,30,50]},{languages:['Chinese','French']}]
     const results = fetchData.map(item => <TourGuide item={item} />)
     return (
