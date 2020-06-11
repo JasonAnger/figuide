@@ -21,13 +21,12 @@ function TourGuide(props) {
                 <div><b>Experience: </b>{props.item.experience?props.item.experience:"Nhiều kinh nghiệm"}</div>
                 <div style={{display: "flex"}}> {tags}</div>
                 <div style={{display: "flex", width:"100%"}}>
-                    
-                    
                 </div>
             </div>
             <div className="chooseOrNot">
                 <div className="rating"><b>Rating: </b>{props.item.rating?props.item.rating:4.5} {stars}</div>
                 <div className="startingAt">Starting at <b>${props.item.prize?props.item.prize[0]:"30$"}</b></div>
+                <div className="moreInfo"><a href={`/guider/${props.item.username?props.item.username:"unknown"}`}>More Info</a></div>
                 <button className="bookButton">BOOK</button>
             </div>
         </div>

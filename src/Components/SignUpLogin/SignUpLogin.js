@@ -15,19 +15,60 @@ function SignUpLogin() {
         document.getElementById('signUp').style.display = "inline"
     }
     let postSignUp = () => {
-
+        let username=document.getElementById('username').value
+        let email=document.getElementById('email').value
+        let password=document.getElementById('password').value
+        let reenterpassword=document.getElementById('password-repeat').value
+        let SignUpURL=""
+        if (password == reenterpassword) {
+            fetch(SignUpURL, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: username,
+                email: email,
+                password: password
+            })
+        })
+        window.location="/"
+        }
     }
     let postLogin = () => {
-        
+        let username=document.getElementById('usernameLogin').value
+        let password=document.getElementById('passwordLogin').value
+        let LoginURL=""
+        fetch(LoginURL, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password,
+            })
+        })
     }
     let isUsedUsername = () => {
         if(document.getElementById('username').value=="jayan") { document.getElementById('usedUsername').style.display="inline"; document.getElementById('okUsername').style.display="none"; } 
         else if(document.getElementById('username').value=="") { document.getElementById('usedUsername').style.display="none"; document.getElementById('okUsername').style.display="none"; } 
         else { document.getElementById('usedUsername').style.display="none"; document.getElementById('okUsername').style.display="inline"; } 
     }
-    let isUsedMail = () => {}
+    let isUsedMail = () => {
+        if(document.getElementById('email').value=="jayan") { document.getElementById('notAnEmail').style.display="none"; document.getElementById('usedEmail').style.display="inline"; document.getElementById('okEmail').style.display="none"; } 
+        else if(document.getElementById('email').value.indexOf('@')==-1 && document.getElementById('email').value!=="") {document.getElementById('notAnEmail').style.display="inline"; document.getElementById('usedEmail').style.display="none"; document.getElementById('okEmail').style.display="none"; } 
+        else if(document.getElementById('email').value=="") { document.getElementById('usedEmail').style.display="none"; document.getElementById('okEmail').style.display="none"; document.getElementById('notAnEmail').style.display="none";} 
+        else {document.getElementById('notAnEmail').style.display="none"; document.getElementById('usedEmail').style.display="none"; document.getElementById('okEmail').style.display="inline"; } 
+    }
     let isLongEnough = () => {}
-    let isSamePassword = () => {}
+    let isSamePassword = () => {
+        if(document.getElementById('password-repeat').value==document.getElementById('password').value) { document.getElementById('okRepeatPassword').style.display="inline"; document.getElementById('wrongRepeatPassword').style.display="none"; } 
+        else if(document.getElementById('password-repeat').value=="") { document.getElementById('wrongRepeatPassword').style.display="none"; document.getElementById('okRepeatPassword').style.display="none"; } 
+        else { document.getElementById('okRepeatPassword').style.display="none"; document.getElementById('wrongRepeatPassword').style.display="inline"; } 
+    }
     return (
         <div id="SignUpLogin">
             <div className="clickHide" onClick={hideSignUp}>
@@ -36,17 +77,24 @@ function SignUpLogin() {
                 <h1>Sign Up</h1>
                 <form>
                     <div>
-                        <label for="email">
+                        <label for="username">
                             <b>Username</b>
                             <div className="registerNotify" id="okUsername">
                                 <img style={{height:"15px"}} src="https://tranggiadung.com/wp-content/uploads/2017/07/Ok-icon.png"></img>
                             </div>
                             <div className="registerNotify" id="usedUsername">This username is already used</div>
                         </label>
-                        <input type="text" placeholder="Enter Email" name="email" id="username" onChange={isUsedUsername} required></input>
+                        <input type="text" placeholder="Enter Username" name="username" id="username" onChange={isUsedUsername} required></input>
                     </div>
                     <div>
-                        <label for="email"><b>Email</b></label>
+                        <label for="email">
+                            <b>Email</b>
+                            <div className="registerNotify" id="okEmail">
+                                <img style={{height:"15px"}} src="https://tranggiadung.com/wp-content/uploads/2017/07/Ok-icon.png"></img>
+                            </div>
+                            <div className="registerNotify" id="usedEmail">This Email is already used</div>
+                            <div className="registerNotify" id="notAnEmail">This is not an Email</div>
+                        </label>
                         <input type="text" placeholder="Enter Email" name="email" id="email" onChange={isUsedMail} required></input>
                     </div>
                     <div>
@@ -54,7 +102,13 @@ function SignUpLogin() {
                         <input type="password" placeholder="Enter Password" name="password" id="password" onChange={isLongEnough} required></input>
                     </div>
                     <div>
-                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <label for="password-repeat">
+                            <b>Repeat Password</b>
+                            <div className="registerNotify" id="okRepeatPassword">
+                                <img style={{height:"15px"}} src="https://tranggiadung.com/wp-content/uploads/2017/07/Ok-icon.png"></img>
+                            </div>
+                            <div className="registerNotify" id="wrongRepeatPassword">Not the same password</div>
+                        </label>
                         <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" onChange={isSamePassword} required></input>
                     </div>
                 </form>
@@ -70,12 +124,12 @@ function SignUpLogin() {
                 <h1>Sign In</h1>
                 <form>
                     <div>
-                        <label for="email"><b>Username</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" id="email" required></input>
+                        <label for="usernameLogin"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="usernameLogin" id="usernameLogin" required></input>
                     </div>
                     <div>
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" id="password" required></input>
+                        <label for="passwordLogin"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="passwordLogin" id="passwordLogin" required></input>
                     </div>
                 </form>
                 <button type="submit" onClick={showSignUp}>Sign Up</button>

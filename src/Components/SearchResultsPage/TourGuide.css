@@ -47,7 +47,6 @@
 }
 
 .bookButton {
-    margin-top: 30%;
     font-size: 24px;
     text-align: center;
     background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
@@ -72,4 +71,15 @@
     vertical-align: baseline;
     border-radius: .25em;
     background-color: #aaaaaa;
+}
+
+.moreInfo {
+    padding: 8px;
+    margin-top: 15%;
+}
+
+.moreInfo a {
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: bold;
 }

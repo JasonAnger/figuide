@@ -1,0 +1,54 @@
+.BeAGuiderPage {
+    display: flex;
+    justify-content: center;
+}
+
+.BeAGuiderPage h1 {
+    font-family: 'Franklin Gothic Demi Cond';
+    font-size: 65px;
+}
+
+.previewAvatar {
+    width: 200px;
+    height: 200px;
+    background: gray;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    margin: 8px;
+}
+
+.BeAGuiderPage form {
+    margin: 0 15%;
+    width: 70%;
+}
+
+.BeAGuiderPage form div {
+    margin: 2px;
+}
+
+.BeAGuiderPage form div label {
+    font-family: 'Franklin Gothic Demi Cond';
+    font-size: 24px;
+}
+
+.BeAGuiderPage form div input {
+    font-family: 'Merriweather', serif;
+    width: 95%;
+    height: 30px;
+}
+
+.register {
+    background-color: #7de2e0;
+    color: white;
+    border-radius: 5px;
+    width: 25%;
+    margin: 0 37.5%;
+    padding: 5px 10px;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Demi Cond';
+    border: none;
+}
