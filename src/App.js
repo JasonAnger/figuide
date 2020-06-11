@@ -20,7 +20,7 @@ function App() {
           <Route path="/trending" component={TrendingPage}></Route>
           <Route path="/beafiguider" component={BeAGuiderPage}></Route>
           <Route path="/results*" component={SearchResults}></Route>
-          <Route path="/guider*" component={GuiderInformation}></Route>
+          <Route path="/*" component={GuiderInformation}></Route>
         </Switch>
         <Footer />
       </div>

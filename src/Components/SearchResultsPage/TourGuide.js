@@ -14,7 +14,7 @@ function TourGuide(props) {
         <div className="TourGuide">
             <img src={props.item.avatar?props.item.avatar:'./images/avatar.jpg'}></img>
             <div className="tourGuideInformation">
-                <div className="tourGuideName"><b>{props.item.name?props.item.name:"Tên gọi thôi"}</b></div>
+                <div className="tourGuideName"><b><a href={`/guider/${props.item.username?props.item.username:"unknown"}`}>{props.item.name?props.item.name:"Tên gọi thôi"}</a></b></div>
                 <div className="fullName"><b>Full name: </b>{props.item.fullName?props.item.fullName:"Tên thiệt tên đầy đủ nè"}</div>
                 <div><b>Homeland: </b>{props.item.homeland?props.item.homeland:"Là quê đó"}</div>
                 <div><b>Languages: </b> {languages}</div>
@@ -26,7 +26,7 @@ function TourGuide(props) {
             <div className="chooseOrNot">
                 <div className="rating"><b>Rating: </b>{props.item.rating?props.item.rating:4.5} {stars}</div>
                 <div className="startingAt">Starting at <b>${props.item.prize?props.item.prize[0]:"30$"}</b></div>
-                <div className="moreInfo"><a href={`/guider/${props.item.username?props.item.username:"unknown"}`}>More Info</a></div>
+                <div className="moreInfo"><a href={`/${props.item.username?props.item.username:"unknown"}`}>More Info</a></div>
                 <button className="bookButton">BOOK</button>
             </div>
         </div>
