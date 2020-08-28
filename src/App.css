@@ -1,0 +1,11 @@
+.ChatBox {
+    position: fixed;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+}
+
+.ChatBox img {
+    width: 100px;
+    height: 100px;    
+}

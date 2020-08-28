@@ -1,0 +1,29 @@
+.resultsTrendingContainer {
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.TrendingPage a {
+    text-decoration: none;
+}
+
+.trendingPlace {
+    background-size: cover;
+    width: 20vw;
+    height: 40vh;
+    color: white;
+    border-radius: 10px;
+    margin: 0 10px;
+    background-position: center;
+}
+
+.trendingPlace div {
+    display: flex;
+    padding-top: 35vh;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}

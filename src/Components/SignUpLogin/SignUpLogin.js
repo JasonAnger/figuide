@@ -36,29 +36,37 @@ function SignUpLogin() {
         window.location="/"
         }
     }
-    let postLogin = () => {
+    let postLogin = async () => {
         let username=document.getElementById('usernameLogin').value
         let password=document.getElementById('passwordLogin').value
-        let LoginURL=""
-        fetch(LoginURL, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                username: username,
-                password: password,
-            })
-        })
+        let results
+        try {
+            results = await fetch(`http://localhost:8080/guide/guide/login?password=${password}&username=${username}`, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            }).then(res => res.json())
+            localStorage.setItem('email',results.email)
+            localStorage.setItem('username',results.username)
+            localStorage.setItem('fullname',results.fullname)
+            localStorage.setItem('id',results.guide_id?results.guide_id:results.guest_id)
+            localStorage.setItem('avatar',results.image)
+            localStorage.setItem('isUser',false)
+            window.location.href="/"
+        } catch(e) {
+        }
     }
-    let isUsedUsername = () => {
-        if(document.getElementById('username').value=="jayan") { document.getElementById('usedUsername').style.display="inline"; document.getElementById('okUsername').style.display="none"; } 
+    let isUsedUsername = async () => {
+        let isUsedUsername = (await fetch(`http://localhost:8080/guide/guide/check-username?username=${document.getElementById('username').value}`).then(data => data.json()))
+        if(isUsedUsername) { document.getElementById('usedUsername').style.display="inline"; document.getElementById('okUsername').style.display="none"; } 
         else if(document.getElementById('username').value=="") { document.getElementById('usedUsername').style.display="none"; document.getElementById('okUsername').style.display="none"; } 
         else { document.getElementById('usedUsername').style.display="none"; document.getElementById('okUsername').style.display="inline"; } 
     }
-    let isUsedMail = () => {
-        if(document.getElementById('email').value=="jayan") { document.getElementById('notAnEmail').style.display="none"; document.getElementById('usedEmail').style.display="inline"; document.getElementById('okEmail').style.display="none"; } 
+    let isUsedMail = async () => {
+        let isUsedMail = (await fetch(`http://localhost:8080/guide/guide/check-email?mail=${document.getElementById('email').value}`).then(data => data.json()))
+        if(isUsedMail) { document.getElementById('notAnEmail').style.display="none"; document.getElementById('usedEmail').style.display="inline"; document.getElementById('okEmail').style.display="none"; } 
         else if(document.getElementById('email').value.indexOf('@')==-1 && document.getElementById('email').value!=="") {document.getElementById('notAnEmail').style.display="inline"; document.getElementById('usedEmail').style.display="none"; document.getElementById('okEmail').style.display="none"; } 
         else if(document.getElementById('email').value=="") { document.getElementById('usedEmail').style.display="none"; document.getElementById('okEmail').style.display="none"; document.getElementById('notAnEmail').style.display="none";} 
         else {document.getElementById('notAnEmail').style.display="none"; document.getElementById('usedEmail').style.display="none"; document.getElementById('okEmail').style.display="inline"; } 

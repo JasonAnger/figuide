@@ -5,7 +5,9 @@ import FeedbackGuider from './GuiderInformation/FeedbackGuider'
 function GuiderInformation() {
   let props = { item: {} }
   let tags = props.item.tags ? props.item.tags.map(item => <div className="label">{item}</div>) : ['tourguide', 'guider', 'tour'].map(item => <div className="label">{item}</div>)
-  let languages = props.item.languages ? props.item.languages.map(item => <img style={{ height: "24px", width: "24px", borderRadius: 0, marginRight: '5px'}} src={`./languages/${item}.png`} ></img>) : []
+  let languages = props.item.languages ? 
+    props.item.languages.map(item => <img style={{ height: "24px", width: "24px", borderRadius: 0, marginRight: '5px'}} src={`./languages/${item}.png`} ></img>) :
+    (['English']).map(item => <img style={{ height: "24px", width: "24px", borderRadius: 0, marginRight: '5px'}} src={`./languages/${item}.png`} ></img>)
   let stars = []
   for(let i=1; i<=5; i++) {
     if((props.item.rating?props.item.rating:4.5)-i>=0)

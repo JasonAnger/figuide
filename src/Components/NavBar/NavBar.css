@@ -27,7 +27,7 @@
     justify-content: space-around;
 }
 
-.NavList div {
+.NavList div{
     width: 20%;
     margin-top: 20px;
     border: 4px solid black;
@@ -37,6 +37,14 @@
     text-align: center;
 }
 
+.NavList div:hover a {
+    color: #1bbe88;
+}
+
+.NavList div:hover:last-child a {
+    color: #ffffff;
+}
+
 .NavList div a {
     color: #000000;
     text-decoration: none;
@@ -44,45 +52,79 @@
     font-size: 23px;
 }
 
-.NavList div:hover {
-    color: #fff;
-    background-color: #000000;
-    transition: ease-in 0.13s;
-}
-
 #searchButton svg path {
     fill: #000000;
 }
 #searchButton:hover svg path {
-    fill: #ffffff;
+    fill: #1bbe88;
 }
 
 .NavList div:hover a {
-    color: #fff;
     transition: ease-in 0.13s;
 }
 
-.NavList div:last-child{
+#signInSignUpButton{
     background: linear-gradient(to bottom right, #7de2e0, #53fbb5);
     border: none;
     padding-top: 12px;
 }
 
-.NavList div:last-child a{
+#signInSignUpButton a{
     color: white;
 }
 
 
-.NavList div:last-child:hover {
+#signInSignUpButton:hover {
     background: transparent;
     border: 4px solid #53fbb5;
     padding: 8px 4px 4px 4px;
     transition: ease-in 0.13s;
 }
 
-.NavList div:last-child:hover a{
+#signInSignUpButton:hover a{
     color: #53fbb5;
     transition: ease-in 0.13s;
+}
+
+.User {
+    display: flex;
+}
+
+#logout {
+    font-size: 15px;
+    color: gray;
+}
+
+.User {
+    background-color: black;
+}
+
+.User div a {
+    color: white;
+}
+
+.NavList .User div {
+    height: 30px;
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    margin-bottom: 0px;
+    padding: 0 0px;
+    text-align: center;
+    line-height: 15px;
+}
+
+.NavList .User div:hover {
+    background-color: none;
+    border: none;
+}
+
+.User img {
+    width: 30px;
+    height: 30px;
+    padding: 0 8px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 
